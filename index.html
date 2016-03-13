@@ -78,8 +78,9 @@ pod 'SDWebImage'
 <p>1.打开项目，并打开storyboard，选中MainController，将它嵌入到NavigationController中。
 <img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/75893354.jpg" alt=""></p>
 
-<p>2.从控件库中拖3个Button到MainController，把它们平铺在navigationBar的下方，这些Button用来切换不同的页面。
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/47017795.jpg" alt=""></p>
+<p>2.从控件库中拖3个Button到MainController，把它们平铺在navigationBar的下方，这些Button用来切换不同的页面。</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/47017795.jpg" alt=""></p>
 
 <p>3.同时选中这3个Button，改变它们的一些属性</p>
 
@@ -106,8 +107,9 @@ pod 'SDWebImage'
 </tbody>
 </table>
 
-<p>完成之后，如下所示
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/53930035.jpg" alt=""></p>
+<p>完成之后，如下所示</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/53930035.jpg" alt=""></p>
 
 <p>4.接下来为button添加约束，以下是我们需要实现的约束</p>
 
@@ -537,8 +539,9 @@ var movieResults: MovieResults?
 
 <p>借助帮助类GetDataFromDouBan的静态方法getData()去获取电影数据</p>
 
-<p>运行之后，可以看到和下面截图类似的结果
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/92880548.jpg" alt=""></p>
+<p>运行之后，可以看到和下面截图类似的结果</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/92880548.jpg" alt=""></p>
 
 <p>11.看到这个说明离成功只有一步之遥了，只是cell的高度太小了，接着实现UITableViewDelegate中的方法，来调整cell的高度。在MovieController.swift文件的最下方，添加这段代码</p>
 
@@ -559,8 +562,9 @@ extension MovieController: UITableViewDelegate {
 <pre><code>movieTableView.delegate = self
 </code></pre>
 
-<p>再运行一次看看效果，比上一次好多了
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/76904026.jpg" alt=""></p>
+<p>再运行一次看看效果，比上一次好多了</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/76904026.jpg" alt=""></p>
 
 <p>此时整个MovieController.swift代码文件的内容，应该和下面的类似</p>
 
@@ -738,8 +742,9 @@ extension BookController: UITableViewDelegate {
 }
 </code></pre>
 
-<p>几乎和MovieController.swift的代码内容一摸一样，只是请求数据的地方不同。运行后，左右滑动，能够在电影，音乐，图书页面之间切换。
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/37876269.jpg" alt=""></p>
+<p>几乎和MovieController.swift的代码内容一摸一样，只是请求数据的地方不同。运行后，左右滑动，能够在电影，音乐，图书页面之间切换。</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/37876269.jpg" alt=""></p>
 
 <p>13.这个demo就快要完成了，最后只剩下装点的当前页面提示条了。找一张条形图片来当作提示条，把它拖到图片资源文件夹中，把图片命名为slider
 <img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/21963866.jpg" alt=""></p>
@@ -747,8 +752,9 @@ extension BookController: UITableViewDelegate {
 <p>14.回到storyboard找到Main Controller，我们的主控制器，打开辅助视图，为包含提示条的View生成对应的outlet，把它命名为sliderView
 <img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/45754818.jpg" alt=""></p>
 
-<p>15.为3个button生成一个Action，这个3个button都会出发这个Action，因为button的tag属性有不同的值，所以根据tag值，可以知道点击了哪个button。选中电影button，按住control键，用鼠标左键拖向代码视图中，生成相应的action，把action命名为changeCurrentPage。完成后把另外两个button也关联到这个action
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/40630800.jpg" alt="">
+<p>15.为3个button生成一个Action，这个3个button都会出发这个Action，因为button的tag属性有不同的值，所以根据tag值，可以知道点击了哪个button。选中电影button，按住control键，用鼠标左键拖向代码视图中，生成相应的action，把action命名为changeCurrentPage。完成后把另外两个button也关联到这个action</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/40630800.jpg" alt="">
 <img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/67566657.jpg" alt=""></p>
 
 <p>16.回到MainController.swift代码文件中，把提示条添加到页面中</p>
@@ -771,8 +777,9 @@ sliderImageView.image = UIImage(named: "slider")
 sliderView.addSubview(sliderImageView)
 </code></pre>
 
-<p>运行可以看到，提示条已经成功添加上去了
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/86789615.jpg" alt=""></p>
+<p>运行可以看到，提示条已经成功添加上去了</p>
+
+<p><img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-13/86789615.jpg" alt=""></p>
 </blockquote>
 
 <p>17.为了能够正确的使用button切换不同的页面，以及同步提示条的位置，需要两个变量来记录当前页面和上一个页面的索引，还要一个包含3个页面的数组</p>
