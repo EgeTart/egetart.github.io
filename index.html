@@ -28,24 +28,32 @@
 <a id="前期准备" class="anchor" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>前期准备</h3>
 
 <p>1.新建一个项目，选择Single View Application
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/67697577.jpg" alt="">
-2.Product Name填PageViewControllerDemo，语言选择Swift
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/38091709.jpg" alt="">
-3.右键点击ViewController.swift代码文件，将它删掉，在弹出的提示框中选择Move To Trash
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/94803868.jpg" alt=""><br>
-4.使用Command + N快捷键新建一个文件，选择Cocoa Touch Class
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/98416265.jpg" alt="">
-5.创建一个UIViewController的子类，将它命名为MainController。在接下来的部分，将会看到MainController的作用是用来给UIPageViewController提供相应的ViewController，并对页面改变做出响应。
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/16771577.jpg" alt="">
-6.打开Main.storyboard，现在只有一个Scene在Main.storyboard中，选中这个scene让它和MainController.swift代码文件关联
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/47595965.jpg" alt="">
-暂时把项目关掉，引入第三方库之后，再重新打开。
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/67697577.jpg" alt=""></p>
+
+<p>2.Product Name填PageViewControllerDemo，语言选择Swift
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/38091709.jpg" alt=""></p>
+
+<p>3.右键点击ViewController.swift代码文件，将它删掉，在弹出的提示框中选择Move To Trash
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/94803868.jpg" alt=""></p>
+
+<p>4.使用Command + N快捷键新建一个文件，选择Cocoa Touch Class
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/98416265.jpg" alt=""></p>
+
+<p>5.创建一个UIViewController的子类，将它命名为MainController。在接下来的部分，将会看到MainController的作用是用来给UIPageViewController提供相应的ViewController，并对页面改变做出响应。
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/16771577.jpg" alt=""></p>
+
+<p>6.打开Main.storyboard，现在只有一个Scene在Main.storyboard中，选中这个scene让它和MainController.swift代码文件关联
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/47595965.jpg" alt=""></p>
+
+<p>暂时把项目关掉，引入第三方库之后，再重新打开。
 接下来我们开始使用Cocoapods引入Alamofire和SDWebimage<br>
 7.使用终端进入项目所在的目录，使用cd &lt;项目路径&gt;命令，回车之后就进入了项目所在目录
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/91909708.jpg" alt="">
-8.在终端敲入这条命令touch Podfile，回车，这样就创建了Podfile文件
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/88638565.jpg" alt="">
-9.打开项目文件夹，你会发现多了一个Podfile文件，双击打开Podfile，将下面这段安装命令复制到Podfile中</p>
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/91909708.jpg" alt=""></p>
+
+<p>8.在终端敲入这条命令touch Podfile，回车，这样就创建了Podfile文件
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/88638565.jpg" alt=""></p>
+
+<p>9.打开项目文件夹，你会发现多了一个Podfile文件，双击打开Podfile，将下面这段安装命令复制到Podfile中</p>
 
 <pre><code>platform :ios, '8.0'
 use_frameworks!
@@ -58,8 +66,9 @@ pod 'SDWebImage'
 
 <p>10.关闭Podfile，回到终端，在终端里面敲入pod install命令，回车，安装第三方库。<br>
 等待....安装完成之后，会有和截图类似结果。
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/99187670.jpg" alt="">
-请注意终端里的最后一句绿色的文字，它说从现在开始要使用PageViewControlerDemo.xcworkspace来打开项目了，因此以后打开这个项目时不能再使用双击PageViewControlerDemo.xcodeproj的方式。</p>
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/99187670.jpg" alt=""></p>
+
+<p>请注意终端里的最后一句绿色的文字，它说从现在开始要使用PageViewControlerDemo.xcworkspace来打开项目了，因此以后打开这个项目时不能再使用双击PageViewControlerDemo.xcodeproj的方式。</p>
 
 <hr>
 
@@ -67,8 +76,9 @@ pod 'SDWebImage'
 <a id="布局阶段" class="anchor" href="#%E5%B8%83%E5%B1%80%E9%98%B6%E6%AE%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>布局阶段</h3>
 
 <p>1.打开项目，并打开storyboard，选中MainController，将它嵌入到NavigationController中。
-<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/75893354.jpg" alt=""><br>
-2.从控件库中拖3个Button到MainController，把它们平铺在navigationBar的下方，这些Button用来切换不同的页面。
+<img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/75893354.jpg" alt=""></p>
+
+<p>2.从控件库中拖3个Button到MainController，把它们平铺在navigationBar的下方，这些Button用来切换不同的页面。
 <img src="http://7xrn7f.com1.z0.glb.clouddn.com/16-3-12/47017795.jpg" alt=""></p>
 
 <p>3.同时选中这3个Button，改变它们的一些属性</p>
